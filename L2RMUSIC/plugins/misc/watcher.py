@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from VenomX import app
-from VenomX.core.call import Ashish
+from L2RMUSIC import app
+from L2RMUSIC.core.call import Ashish
 
 welcome = 20
 close = 30
