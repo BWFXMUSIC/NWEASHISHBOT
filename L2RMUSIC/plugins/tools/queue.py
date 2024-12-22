@@ -8,7 +8,7 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from VenomX import app
 from VenomX.misc import db
-from VenomX.utils import AyushBin, get_channeplayCB, seconds_to_min
+from VenomX.utils import AshishBin, get_channeplayCB, seconds_to_min
 from VenomX.utils.database import get_cmode, is_active_chat, is_music_playing
 from VenomX.utils.decorators.language import language, languageCB
 from VenomX.utils.inline import queue_back_markup, queue_markup
@@ -176,7 +176,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)
         if "✨" in msg:
             msg = msg.replace("✨", "")
-        link = await AyushBin(msg)
+        link = await AshishBin(msg)
         med = InputMediaPhoto(media=link, caption=_["queue_3"].format(link))
         await CallbackQuery.edit_message_media(media=med, reply_markup=buttons)
     else:

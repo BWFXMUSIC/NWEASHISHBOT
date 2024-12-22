@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from VenomX import LOGGER, app, userbot
-from VenomX.core.call import Ayush
+from VenomX.core.call import Ashish
 from VenomX.misc import sudo
 from VenomX.plugins import ALL_MODULES
 from VenomX.utils.database import get_banned_users, get_gbanned
@@ -38,9 +38,9 @@ async def init():
         importlib.import_module("VenomX.plugins" + all_module)
     LOGGER("VenomX.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await Ayush.start()
+    await Ashish.start()
     try:
-        await Ayush.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await Ashish.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("VenomX").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
@@ -48,7 +48,7 @@ async def init():
         exit()
     except:
         pass
-    await Ayush.decorators()
+    await Ashish.decorators()
     LOGGER("VenomX").info("ᴠᴇɴᴏᴍxᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ɴᴏᴡ ᴇɴᴊᴏʏ")
 
     await idle()

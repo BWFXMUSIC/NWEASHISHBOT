@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from VenomX import app
-from VenomX.core.call import Ayush
+from VenomX.core.call import Ashish
 from VenomX.misc import SUDOERS, db
 from VenomX.utils import AdminRightsCheck
 from VenomX.utils.database import is_active_chat, is_nonadmin_chat
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await Ayush.speedup_stream(
+        await Ashish.speedup_stream(
             chat_id,
             file_path,
             speed,

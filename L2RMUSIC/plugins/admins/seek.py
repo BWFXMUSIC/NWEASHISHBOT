@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from VenomX import YouTube, app
-from VenomX.core.call import Ayush
+from VenomX.core.call import Ashish
 from VenomX.misc import db
 from VenomX.utils import AdminRightsCheck, seconds_to_min
 from VenomX.utils.inline import close_markup
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Ayush.seek_stream(
+        await Ashish.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
